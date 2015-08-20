@@ -203,10 +203,10 @@
                 return;
             }
             if ('string' === typeof rules) {
-                rules = rules.toLowerCase();
-                if (-1 !== rules.indexOf('min-width') || -1 !== rules.indexOf('max-width')) {
-                    extractQuery(rules);
-                }
+            	var lCaseRules = rules.toLowerCase();
+            	if (-1 !== lCaseRules.indexOf('min-width') || -1 !== lCaseRules.indexOf('max-width')) {
+            	    extractQuery(rules);
+            	}
             } else {
                 for (var i = 0, j = rules.length; i < j; i++) {
                     if (1 === rules[i].type) {
